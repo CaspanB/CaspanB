@@ -1,5 +1,3 @@
-package de.fulvius.RLE_komprimierung;
-
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.Scanner;
@@ -7,7 +5,7 @@ import java.util.Scanner;
 public class main {
     public static void main(String[] args) {
         main m = new main();
-        String path = "D:\\SRZ\\src\\de\\fulvius\\RLE_komprimierung\\blume.txt";
+        String path = "blume.txt";
         char[] blume = m.readFile(path);
         char[] kompBlume = m.komprimieren(blume);
         m.printCharArray(kompBlume);
