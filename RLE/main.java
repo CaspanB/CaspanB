@@ -12,8 +12,8 @@ public class main {
         char[] dekomp = m.dekomprimieren(kompBlume);
         m.printCharArray(dekomp);
 
-        double kompFaktor = blume.length / kompBlume.length;
-        System.out.println(blume.length + "/" + kompBlume.length + "; Komprimierungsfaktor: " + kompFaktor);
+        double kompFaktor = kompBlume.length / blume.length;
+        System.out.println(kompBlume.length + "/" + blume.length + "; Komprimierungsfaktor: " + kompFaktor);
     }
 
     public char[] komprimieren(char[] input){
@@ -50,10 +50,7 @@ public class main {
 
         for (int i = 0; i < input.length; i++) {
             if(Character.isDigit(input[i])){
-                if(Character.isDigit(lastChar)){
-                    digit += input[i];
-                }else
-                    digit += input[i];
+                digit += input[i];
             }else{
                 if(digit != ""){
                     for (int j = 0; j < Integer.parseInt(digit); j++) {
@@ -101,9 +98,5 @@ public class main {
                 ausgabe+="" + input[i];
             }
         }
-        //System.out.println(ausgabe);
     }
 }
-
-//wwwwwwwwwwwwrwwwwwwwrrrwwwwwwwwwwww - 35
-//wwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwww
